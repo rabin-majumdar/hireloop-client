@@ -108,9 +108,11 @@ export function Navbar() {
       <nav className="mx-auto container flex items-center justify-between rounded-xl border border-white/10 bg-neutral-950/90 px-4 py-2.5 shadow-lg backdrop-blur sm:px-6">
         <Logo />
 
-        {/* Desktop */}
-        <DesktopNavLinks />
-        <DesktopActions />
+        {/* Desktop — সব কন্টেন্ট এক পাশে */}
+        <div className="flex items-center gap-2">
+          <DesktopNavLinks />
+          <DesktopActions />
+        </div>
 
         {/* Mobile toggle */}
         <Button
