@@ -2,9 +2,11 @@
 
 import Image from "next/image"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { useState } from "react"
 
 import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 import { Menu, X } from "lucide-react"
 
 const navLinks = [
@@ -29,13 +31,19 @@ function Logo() {
 }
 
 function DesktopNavLinks() {
+  const pathname = usePathname()
+
   return (
     <ul className="hidden items-center md:flex">
       {navLinks.map((link) => (
         <li key={link.href}>
           <Link
             href={link.href}
-            className="rounded-full px-3.5 py-1.5 text-sm text-neutral-300 transition-colors hover:text-white"
+            aria-current={pathname === link.href ? "page" : undefined}
+            className={cn(
+              "rounded-full px-3.5 py-1.5 text-sm text-neutral-300 transition-colors hover:text-white",
+              pathname === link.href && "bg-white/10 text-white"
+            )}
           >
             {link.label}
           </Link>
@@ -68,6 +76,8 @@ function DesktopActions() {
 }
 
 function MobileActions({ onNavigate }: { onNavigate: () => void }) {
+  const pathname = usePathname()
+
   return (
     <div className="flex flex-col gap-2 md:hidden">
       {navLinks.map((link) => (
@@ -75,7 +85,11 @@ function MobileActions({ onNavigate }: { onNavigate: () => void }) {
           key={link.href}
           href={link.href}
           onClick={onNavigate}
-          className="rounded-lg px-3 py-2 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white"
+          aria-current={pathname === link.href ? "page" : undefined}
+          className={cn(
+            "rounded-lg px-3 py-2 text-sm text-neutral-300 transition-colors hover:bg-white/5 hover:text-white",
+            pathname === link.href && "bg-white/10 text-white font-medium"
+          )}
         >
           {link.label}
         </Link>
@@ -108,7 +122,7 @@ export function Navbar() {
       <nav className="mx-auto container flex items-center justify-between rounded-xl border border-white/10 bg-neutral-950/90 px-4 py-2.5 shadow-lg backdrop-blur sm:px-6">
         <Logo />
 
-        {/* Desktop — সব কন্টেন্ট এক পাশে */}
+        {/* Desktop — links and actions grouped on one side */}
         <div className="flex items-center gap-2">
           <DesktopNavLinks />
           <DesktopActions />
