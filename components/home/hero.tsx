@@ -43,13 +43,7 @@ function SearchBar() {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-neutral-950 px-4 pt-20 pb-16 text-white md:pt-28 md:pb-20">
-      {/* Subtle top glow */}
-      <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.07),transparent_55%)]"
-        aria-hidden="true"
-      />
-
+    <section className="px-4 pt-20 pb-16 text-white md:pt-28 md:pb-20">
       <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs">

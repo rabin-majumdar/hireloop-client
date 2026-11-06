@@ -43,7 +43,7 @@ function Globe() {
 
 export function StatsSection() {
   return (
-    <section className="overflow-hidden bg-neutral-950 px-4 pt-2 pb-12 text-white md:pb-16">
+    <section className="px-4 pt-2 pb-12 text-white md:pb-16">
       <Globe />
 
       {/* Stat cards */}

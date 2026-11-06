@@ -25,6 +25,13 @@ export default function RootLayout({
     >
       <body>
         <ThemeProvider>
+          {/* Full-page dark background — glows radiate from the top corners behind the navbar */}
+          <div
+            className="pointer-events-none fixed inset-0 -z-10 bg-neutral-950"
+            aria-hidden="true"
+          >
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_40%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_40%)]" />
+          </div>
           <Navbar />
           {children}
         </ThemeProvider>
