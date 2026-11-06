@@ -17,37 +17,37 @@ const stats: Stat[] = [
 
 function Globe() {
   return (
-    <div className="relative mx-auto h-[380px] w-full max-w-3xl md:h-[480px]">
+    <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[16/10]">
       <Image
         src="/images/globe.png"
         alt=""
         fill
-        sizes="(max-width: 768px) 100vw, 768px"
-        className="object-cover object-top"
+        sizes="100vw"
+        className="object-cover object-bottom"
         priority
       />
 
-      {/* Tagline */}
-      <p className="absolute inset-0 flex items-center justify-center px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
-        Assisting over 15,000 job seekers find their dream positions.
-      </p>
-
-      {/* Fade globe bottom into page background */}
+      {/* Darken leftover pink edges at the top so the globe blends into the page */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-neutral-950 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-neutral-950 to-transparent"
         aria-hidden="true"
       />
+
+      {/* Tagline sits just above the planet */}
+      <p className="absolute inset-x-0 top-[22%] px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
+        Assisting over 15,000 job seekers find their dream positions.
+      </p>
     </div>
   )
 }
 
 export function StatsSection() {
   return (
-    <section className="px-4 pt-2 pb-12 text-white md:pb-16">
+    <section className="pb-12 text-white md:pb-16">
       <Globe />
 
       {/* Stat cards */}
-      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
+      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 px-4 md:grid-cols-4 md:gap-4">
         {stats.map(({ icon: Icon, value, label }) => (
           <div
             key={label}
