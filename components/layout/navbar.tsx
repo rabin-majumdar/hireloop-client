@@ -124,7 +124,7 @@ export function Navbar() {
 
       {/* Corner glow — above the showcase's dark overlay, below content */}
       <div
-        className="pointer-events-none fixed inset-0 z-[6] bg-[radial-gradient(420px_circle_at_top_left,rgba(255,255,255,0.20)_0%,rgba(255,255,255,0.05)_58%,transparent_78%),radial-gradient(420px_circle_at_top_right,rgba(255,255,255,0.20)_0%,rgba(255,255,255,0.05)_58%,transparent_78%)]"
+        className="pointer-events-none fixed inset-0 z-6 bg-[radial-gradient(420px_circle_at_top_left,rgba(255,255,255,0.20)_0%,rgba(255,255,255,0.05)_58%,transparent_78%),radial-gradient(420px_circle_at_top_right,rgba(255,255,255,0.20)_0%,rgba(255,255,255,0.05)_58%,transparent_78%)]"
         aria-hidden="true"
       />
 

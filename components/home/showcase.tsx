@@ -28,13 +28,13 @@ export function Showcase({ children }: { children: ReactNode }) {
 
       {/* Darken the top area above the arc so navbar/hero stay readable */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 z-[5] h-72 bg-gradient-to-b from-neutral-950 via-neutral-950/80 to-transparent md:h-[420px]"
+        className="pointer-events-none absolute inset-x-0 top-0 z-5 h-72 bg-linear-to-b from-neutral-950 via-neutral-950/80 to-transparent md:h-105"
         aria-hidden="true"
       />
 
       {/* Fade the planet's clipped bottom edge into the page background */}
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-[7] h-40 bg-gradient-to-b from-transparent to-neutral-950"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-7 h-40 bg-linear-to-b from-transparent to-neutral-950"
         aria-hidden="true"
       />
 
