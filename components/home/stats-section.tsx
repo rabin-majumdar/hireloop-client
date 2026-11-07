@@ -19,14 +19,12 @@ export function StatsSection() {
   return (
     <section className="bg-transparent px-4 pt-24 text-white md:pt-36">
       {/* Tagline — sits over the planet, between the hero and the stat cards */}
-      <div className="container mx-auto px-6">
-        <p className="mx-auto max-w-xl text-center text-2xl font-medium leading-snug md:text-3xl">
-          Assisting over 15,000 job seekers find their dream positions.
-        </p>
-      </div>
+      <p className="mx-auto max-w-xl px-6 text-center text-2xl font-medium leading-snug md:text-3xl">
+        Assisting over 15,000 job seekers find their dream positions.
+      </p>
 
       {/* Stat cards */}
-      <div className="container mx-auto mt-10 grid grid-cols-2 gap-3 md:mt-14 md:grid-cols-4 md:gap-4">
+      <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-3 md:mt-14 md:grid-cols-4 md:gap-4">
         {stats.map(({ icon: Icon, value, label }) => (
           <div
             key={label}
