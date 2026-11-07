@@ -43,7 +43,7 @@ function SearchBar() {
 
 export function Hero() {
   return (
-    <section className="px-4 pt-20 pb-16 text-white md:pt-28 md:pb-20">
+    <section className="px-4 pt-20 pb-10 text-white md:pt-28 md:pb-14">
       <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs">

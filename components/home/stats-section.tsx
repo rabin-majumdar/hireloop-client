@@ -17,14 +17,14 @@ const stats: Stat[] = [
 
 function Globe() {
   return (
-    <div className="relative aspect-[5/2] w-full overflow-hidden md:aspect-[12/5]">
+    <div className="relative aspect-[5/2] w-full overflow-hidden md:aspect-[11/4]">
       <Image
         src="/images/globe.png"
         alt=""
         priority
         width={1440}
         height={1882}
-        className="h-auto w-full -translate-y-[42%]"
+        className="h-auto w-full -translate-y-[46%]"
       />
 
       {/* Blend the image edges into the dark page background */}
