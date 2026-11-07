@@ -20,17 +20,17 @@ export function Showcase({ children }: { children: ReactNode }) {
             alt=""
             width={1440}
             height={1882}
-            className="block h-auto w-full translate-y-[9%]"
-            aria-hidden="true"
-          />
-
-          {/* Darken the bright upper part of the image so the hero stays readable */}
-          <div
-            className="pointer-events-none absolute inset-x-0 top-0 h-[45%] bg-gradient-to-b from-neutral-950 via-neutral-950/90 to-transparent"
+            className="block h-auto w-full translate-y-[28%]"
             aria-hidden="true"
           />
         </div>
       </div>
+
+      {/* Darken the top area above the arc so navbar/hero stay readable */}
+      <div
+        className="pointer-events-none absolute inset-x-0 top-0 z-[5] h-72 bg-gradient-to-b from-neutral-950 via-neutral-950/80 to-transparent md:h-[420px]"
+        aria-hidden="true"
+      />
 
       {/* Sections sit above the background */}
       <div className="relative z-10">{children}</div>
