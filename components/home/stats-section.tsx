@@ -24,7 +24,7 @@ export function StatsSection() {
       </p>
 
       {/* Stat cards */}
-      <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-3 md:mt-14 md:grid-cols-4 md:gap-4">
+      <div className="mx-auto mt-14 grid max-w-5xl grid-cols-2 gap-3 md:mt-20 md:grid-cols-4 md:gap-4">
         {stats.map(({ icon: Icon, value, label }) => (
           <div
             key={label}
