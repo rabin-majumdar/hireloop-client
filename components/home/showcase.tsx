@@ -13,8 +13,8 @@ export function Showcase({ children }: { children: ReactNode }) {
   return (
     <div className="relative overflow-hidden">
       {/* Planet background — anchored to the bottom of the section */}
-      <div className="absolute inset-x-0 bottom-0 flex justify-center">
-        <div className="relative w-[92%] max-w-6xl shrink-0">
+      <div className="absolute inset-x-0 bottom-0">
+        <div className="container relative">
           <Image
             src="/images/globe.png"
             alt=""
