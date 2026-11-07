@@ -124,7 +124,7 @@ export function Navbar() {
         className="pointer-events-none fixed inset-0 -z-10 bg-neutral-950"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_20%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.07),transparent_20%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(360px_circle_at_top_left,rgba(255,255,255,0.10),transparent_75%),radial-gradient(360px_circle_at_top_right,rgba(255,255,255,0.10),transparent_75%)]" />
       </div>
 
       <header className="sticky top-0 z-50 w-full px-4 pt-4">
