@@ -20,7 +20,7 @@ export function Showcase({ children }: { children: ReactNode }) {
             alt=""
             width={1440}
             height={1882}
-            className="block h-auto w-full translate-y-[28%]"
+            className="block h-auto w-full translate-y-[34%]"
             aria-hidden="true"
           />
         </div>
