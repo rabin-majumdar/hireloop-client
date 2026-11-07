@@ -119,13 +119,14 @@ export function Navbar() {
 
   return (
     <>
-      {/* Full-page dark background — soft glows confined to the top corners */}
+      {/* Full-page dark base — sits behind everything */}
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-neutral-950" aria-hidden="true" />
+
+      {/* Corner glow — above the showcase's dark overlay, below content */}
       <div
-        className="pointer-events-none fixed inset-0 -z-10 bg-neutral-950"
+        className="pointer-events-none fixed inset-0 z-[6] bg-[radial-gradient(420px_circle_at_top_left,rgba(255,255,255,0.20)_0%,rgba(255,255,255,0.05)_58%,transparent_78%),radial-gradient(420px_circle_at_top_right,rgba(255,255,255,0.20)_0%,rgba(255,255,255,0.05)_58%,transparent_78%)]"
         aria-hidden="true"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(360px_circle_at_top_left,rgba(255,255,255,0.10),transparent_75%),radial-gradient(360px_circle_at_top_right,rgba(255,255,255,0.10),transparent_75%)]" />
-      </div>
+      />
 
       <header className="sticky top-0 z-50 w-full px-4 pt-4">
       <nav className="mx-auto container flex items-center justify-between rounded-xl border border-white/10 bg-neutral-950/90 px-4 py-2.5 shadow-lg backdrop-blur sm:px-6">
