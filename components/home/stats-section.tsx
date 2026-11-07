@@ -17,24 +17,24 @@ const stats: Stat[] = [
 
 function Globe() {
   return (
-    <div className="relative aspect-[4/3] w-full overflow-hidden md:aspect-[16/10]">
+    <div className="relative aspect-[5/2] w-full overflow-hidden md:aspect-[12/5]">
       <Image
         src="/images/globe.png"
         alt=""
-        fill
-        sizes="100vw"
-        className="object-cover object-bottom"
         priority
+        width={1440}
+        height={1882}
+        className="h-auto w-full -translate-y-[42%]"
       />
 
-      {/* Darken leftover pink edges at the top so the globe blends into the page */}
+      {/* Blend the image edges into the dark page background */}
       <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-neutral-950 to-transparent"
+        className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-neutral-950 to-transparent"
         aria-hidden="true"
       />
 
       {/* Tagline sits just above the planet */}
-      <p className="absolute inset-x-0 top-[22%] px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
+      <p className="absolute inset-x-0 top-1/3 px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
         Assisting over 15,000 job seekers find their dream positions.
       </p>
     </div>
