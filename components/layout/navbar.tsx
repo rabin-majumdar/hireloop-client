@@ -118,7 +118,16 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full px-4 pt-4">
+    <>
+      {/* Full-page dark background — glows radiate from the top corners behind the navbar */}
+      <div
+        className="pointer-events-none fixed inset-0 -z-10 bg-neutral-950"
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_40%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_40%)]" />
+      </div>
+
+      <header className="sticky top-0 z-50 w-full px-4 pt-4">
       <nav className="mx-auto container flex items-center justify-between rounded-xl border border-white/10 bg-neutral-950/90 px-4 py-2.5 shadow-lg backdrop-blur sm:px-6">
         <Logo />
 
@@ -148,5 +157,6 @@ export function Navbar() {
         </div>
       )}
     </header>
+    </>
   )
 }
