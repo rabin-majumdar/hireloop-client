@@ -34,9 +34,15 @@ function Globe() {
       />
 
       {/* Tagline sits just above the planet */}
-      <p className="absolute inset-x-0 top-1/3 px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
+      <p className="absolute inset-x-0 top-[22%] px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
         Assisting over 15,000 job seekers find their dream positions.
       </p>
+
+      {/* Fade the planet bottom into the page background so the cards sit closer */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-b from-transparent to-neutral-950"
+        aria-hidden="true"
+      />
     </div>
   )
 }
