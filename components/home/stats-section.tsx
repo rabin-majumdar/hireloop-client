@@ -17,7 +17,7 @@ const stats: Stat[] = [
 
 export function StatsSection() {
   return (
-    <section className="bg-transparent px-4 pt-24 pb-4 text-white md:pt-36 md:pb-6">
+    <section className="bg-transparent px-4 pt-24 text-white md:pt-36">
       {/* Tagline — sits over the planet, between the hero and the stat cards */}
       <div className="container mx-auto px-6">
         <p className="mx-auto max-w-xl text-center text-2xl font-medium leading-snug md:text-3xl">
