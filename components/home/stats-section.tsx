@@ -17,7 +17,7 @@ const stats: Stat[] = [
 
 export function StatsSection() {
   return (
-    <section className="bg-transparent px-4 pb-4 text-white md:pb-6">
+    <section className="bg-transparent px-4 pt-16 pb-4 text-white md:pt-24 md:pb-6">
       {/* Tagline — sits over the planet, between the hero and the stat cards */}
       <p className="mx-auto max-w-xl px-6 text-center text-2xl font-medium leading-snug md:text-3xl">
         Assisting over 15,000 job seekers find their dream positions.
