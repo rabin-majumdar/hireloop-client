@@ -32,6 +32,12 @@ export function Showcase({ children }: { children: ReactNode }) {
         aria-hidden="true"
       />
 
+      {/* Fade the planet's clipped bottom edge into the page background */}
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[7] h-40 bg-gradient-to-b from-transparent to-neutral-950"
+        aria-hidden="true"
+      />
+
       {/* Sections sit above the background */}
       <div className="relative z-10">{children}</div>
     </div>
