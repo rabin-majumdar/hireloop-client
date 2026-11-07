@@ -119,12 +119,12 @@ export function Navbar() {
 
   return (
     <>
-      {/* Full-page dark background — glows radiate from the top corners behind the navbar */}
+      {/* Full-page dark background — soft glows confined to the top corners */}
       <div
         className="pointer-events-none fixed inset-0 -z-10 bg-neutral-950"
         aria-hidden="true"
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.14),transparent_40%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.14),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.07),transparent_20%),radial-gradient(circle_at_top_right,rgba(255,255,255,0.07),transparent_20%)]" />
       </div>
 
       <header className="sticky top-0 z-50 w-full px-4 pt-4">
