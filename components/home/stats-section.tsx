@@ -1,4 +1,4 @@
-import Image from "next/image"
+"use client"
 
 import { Briefcase, Building2, Star, Users, type LucideIcon } from "lucide-react"
 
@@ -15,45 +15,16 @@ const stats: Stat[] = [
   { icon: Star, value: "97%", label: "Satisfaction Rate" },
 ]
 
-function Globe() {
+export function StatsSection() {
   return (
-    <div className="relative aspect-[5/2] w-full overflow-hidden md:aspect-[11/4]">
-      <Image
-        src="/images/globe.png"
-        alt=""
-        priority
-        width={1440}
-        height={1882}
-        className="h-auto w-full -translate-y-[46%]"
-      />
-
-      {/* Blend the image edges into the dark page background */}
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-neutral-950 to-transparent"
-        aria-hidden="true"
-      />
-
-      {/* Tagline sits just above the planet */}
-      <p className="absolute inset-x-0 top-[22%] px-8 text-center text-2xl font-medium leading-snug md:text-3xl">
+    <section className="bg-transparent px-4 pb-12 text-white md:pb-16">
+      {/* Tagline — sits over the planet, between the hero and the stat cards */}
+      <p className="mx-auto max-w-xl px-6 text-center text-2xl font-medium leading-snug md:text-3xl">
         Assisting over 15,000 job seekers find their dream positions.
       </p>
 
-      {/* Fade the planet bottom into the page background so the cards sit closer */}
-      <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-1/6 bg-gradient-to-b from-transparent to-neutral-950"
-        aria-hidden="true"
-      />
-    </div>
-  )
-}
-
-export function StatsSection() {
-  return (
-    <section className="pb-12 text-white md:pb-16">
-      <Globe />
-
       {/* Stat cards */}
-      <div className="mx-auto grid max-w-5xl grid-cols-2 gap-3 px-4 md:grid-cols-4 md:gap-4">
+      <div className="mx-auto mt-10 grid max-w-5xl grid-cols-2 gap-3 md:mt-14 md:grid-cols-4 md:gap-4">
         {stats.map(({ icon: Icon, value, label }) => (
           <div
             key={label}
